@@ -3,14 +3,235 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport"
-        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Antools</title>
+    <link rel="icon" href="img/antools_logo.svg" type="image/svg+xml">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
 </head>
 
 <body>
-    
+    <header class="header" id="top">
+        <a class="header__logo" href="#top">
+            <img class="header__mark" src="img/antools_logo.svg" alt="" width="38" height="38">
+            <span class="header__name">antools.</span>
+        </a>
+        <nav class="header__nav" aria-label="Primary">
+            <ul class="header__menu">
+                <li class="header__menu-item">
+                    <a class="header__link" href="#top">Home</a>
+                </li>
+                <li class="header__menu-item header__menu-item_dropdown">
+                    <button class="header__menu-button" type="button" aria-expanded="false" aria-controls="category-menu">
+                        Categories
+                        <img src="img/chevron_down_icon.svg" alt="" width="18" height="18">
+                    </button>
+                    <ul class="header__dropdown" id="category-menu" hidden>
+                        <li><button class="header__option" type="button" data-category="all">All tools</button></li>
+                        <li><button class="header__option" type="button" data-category="design">Design</button></li>
+                        <li><button class="header__option" type="button" data-category="development">Development</button></li>
+                        <li><button class="header__option" type="button" data-category="collaboration">Collaboration</button></li>
+                    </ul>
+                </li>
+                <li class="header__menu-item">
+                    <a class="header__link" href="#popular" data-collection="true">My Collections</a>
+                </li>
+                <li class="header__menu-item">
+                    <a class="header__link" href="#popular">Blog</a>
+                </li>
+            </ul>
+        </nav>
+        <div class="header__auth">
+            <a class="header__login" href="#top">Login</a>
+            <a class="header__signup" href="#search">Sign Up</a>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero__content">
+                <h1 class="hero__title">Awesome tools for <br>Designer &amp; Developer<span class="hero__period">.</span></h1>
+                <p class="hero__description"><span class="hero__line">Antool is a web collection of information on paid or</span> <span class="hero__line">free Design and Development tools</span></p>
+                <div class="hero__search-border">
+                    <form class="hero__search" id="search" role="search">
+                        <img class="hero__search-icon" src="img/search_icon.svg" alt="" width="25" height="24">
+                        <label class="hero__search-label" for="tool-search">Search tools</label>
+                        <input class="hero__search-input" id="tool-search" type="search" name="query" placeholder="find more than 430+ tools...">
+                        <button class="hero__search-button" type="submit">Search</button>
+                    </form>
+                </div>
+                <div class="hero__social">
+                    <a class="hero__social-link" href="https://facebook.com" target="_blank" rel="noopener noreferrer">
+                        <img src="img/facebook_logo.svg" alt="Facebook" width="34" height="34">
+                    </a>
+                    <a class="hero__social-link" href="https://instagram.com" target="_blank" rel="noopener noreferrer">
+                        <img src="img/instagram_logo.svg" alt="Instagram" width="36" height="36">
+                    </a>
+                    <a class="hero__social-link" href="https://twitter.com" target="_blank" rel="noopener noreferrer">
+                        <img src="img/twitter_logo.svg" alt="Twitter" width="36" height="36">
+                    </a>
+                </div>
+            </div>
+            <img class="hero__art" src="img/hero_background.png" alt="" width="589" height="568">
+        </section>
+
+        <section class="popular" id="popular">
+            <h2 class="popular__title">Most Popular Tools</h2>
+            <p class="popular__description"><span class="popular__line">Tools for the best Designers and Developers</span> <span class="popular__line">most popularly used in the world</span></p>
+            <div class="popular__list">
+                <article class="card" data-name="Figma" data-category="design">
+                    <div class="card__header">
+                        <img class="card__logo" src="img/figma_logo.svg" alt="" width="64" height="64">
+                        <div class="card__heading">
+                            <h3 class="card__title">FIGMA</h3>
+                            <p class="card__price">Free</p>
+                        </div>
+                    </div>
+                    <p class="card__description">Lorem ipsum dolor sit amet, consectetur<br>adipiscing elit.</p>
+                    <div class="card__actions">
+                        <button class="card__like" type="button" aria-pressed="false" aria-label="Like FIGMA">
+                            <img class="card__icon card__icon_idle" src="img/like_icon.svg" alt="" width="28" height="28">
+                            <img class="card__icon card__icon_pressed" src="img/like_icon_active.svg" alt="" width="28" height="28">
+                        </button>
+                        <button class="card__save" type="button" aria-pressed="false" aria-label="Save FIGMA">
+                            <img class="card__icon" src="img/add_icon.svg" alt="" width="30" height="30">
+                        </button>
+                        <a class="card__visit" href="https://www.figma.com/" target="_blank" rel="noopener noreferrer">Visit</a>
+                    </div>
+                </article>
+
+                <article class="card card_featured" data-name="Sketch" data-category="design">
+                    <div class="card__header">
+                        <img class="card__logo" src="img/sketch_logo.svg" alt="" width="64" height="57">
+                        <div class="card__heading">
+                            <h3 class="card__title">Sketch</h3>
+                            <p class="card__price card__price_bright">Trial &amp; Paid</p>
+                        </div>
+                    </div>
+                    <p class="card__description">Lorem ipsum dolor sit amet, consectetur<br>adipiscing elit.</p>
+                    <div class="card__actions">
+                        <button class="card__like card__like_active" type="button" aria-pressed="true" aria-label="Like Sketch">
+                            <img class="card__icon card__icon_idle" src="img/like_icon.svg" alt="" width="28" height="28">
+                            <img class="card__icon card__icon_pressed" src="img/like_icon_active.svg" alt="" width="28" height="28">
+                        </button>
+                        <button class="card__save" type="button" aria-pressed="false" aria-label="Save Sketch">
+                            <img class="card__icon" src="img/add_icon.svg" alt="" width="30" height="30">
+                        </button>
+                        <a class="card__visit card__visit_primary" href="https://www.sketch.com/" target="_blank" rel="noopener noreferrer">Visit</a>
+                    </div>
+                </article>
+
+                <article class="card" data-name="Visual Studio Code" data-category="development">
+                    <div class="card__header">
+                        <img class="card__logo" src="img/vscode_logo.svg" alt="" width="65" height="63">
+                        <div class="card__heading">
+                            <h3 class="card__title">Visual Studio Code</h3>
+                            <p class="card__price">Free</p>
+                        </div>
+                    </div>
+                    <p class="card__description">Lorem ipsum dolor sit amet, consectetur<br>adipiscing elit.</p>
+                    <div class="card__actions">
+                        <button class="card__like" type="button" aria-pressed="false" aria-label="Like Visual Studio Code">
+                            <img class="card__icon card__icon_idle" src="img/like_icon.svg" alt="" width="28" height="28">
+                            <img class="card__icon card__icon_pressed" src="img/like_icon_active.svg" alt="" width="28" height="28">
+                        </button>
+                        <button class="card__save" type="button" aria-pressed="false" aria-label="Save Visual Studio Code">
+                            <img class="card__icon" src="img/add_icon.svg" alt="" width="30" height="30">
+                        </button>
+                        <a class="card__visit" href="https://code.visualstudio.com/" target="_blank" rel="noopener noreferrer">Visit</a>
+                    </div>
+                </article>
+
+                <article class="card" data-name="Notion" data-category="collaboration">
+                    <div class="card__header">
+                        <img class="card__logo" src="img/notion_logo.svg" alt="" width="64" height="64">
+                        <div class="card__heading">
+                            <h3 class="card__title">Notion</h3>
+                            <p class="card__price">Free &amp; Paid</p>
+                        </div>
+                    </div>
+                    <p class="card__description">Lorem ipsum dolor sit amet, consectetur<br>adipiscing elit.</p>
+                    <div class="card__actions">
+                        <button class="card__like" type="button" aria-pressed="false" aria-label="Like Notion">
+                            <img class="card__icon card__icon_idle" src="img/like_icon.svg" alt="" width="28" height="28">
+                            <img class="card__icon card__icon_pressed" src="img/like_icon_active.svg" alt="" width="28" height="28">
+                        </button>
+                        <button class="card__save" type="button" aria-pressed="false" aria-label="Save Notion">
+                            <img class="card__icon" src="img/add_icon.svg" alt="" width="30" height="30">
+                        </button>
+                        <a class="card__visit" href="https://www.notion.so/" target="_blank" rel="noopener noreferrer">Visit</a>
+                    </div>
+                </article>
+
+                <article class="card" data-name="Slack" data-category="collaboration">
+                    <div class="card__header">
+                        <img class="card__logo" src="img/slack_logo.svg" alt="" width="65" height="64">
+                        <div class="card__heading">
+                            <h3 class="card__title">Slack</h3>
+                            <p class="card__price">Free &amp; Paid</p>
+                        </div>
+                    </div>
+                    <p class="card__description">Lorem ipsum dolor sit amet, consectetur<br>adipiscing elit.</p>
+                    <div class="card__actions">
+                        <button class="card__like" type="button" aria-pressed="false" aria-label="Like Slack">
+                            <img class="card__icon card__icon_idle" src="img/like_icon.svg" alt="" width="28" height="28">
+                            <img class="card__icon card__icon_pressed" src="img/like_icon_active.svg" alt="" width="28" height="28">
+                        </button>
+                        <button class="card__save" type="button" aria-pressed="false" aria-label="Save Slack">
+                            <img class="card__icon" src="img/add_icon.svg" alt="" width="30" height="30">
+                        </button>
+                        <a class="card__visit" href="https://slack.com/" target="_blank" rel="noopener noreferrer">Visit</a>
+                    </div>
+                </article>
+
+                <article class="card" data-name="Invision" data-category="design">
+                    <div class="card__header">
+                        <img class="card__logo" src="img/invision_logo.svg" alt="" width="65" height="64">
+                        <div class="card__heading">
+                            <h3 class="card__title">Invision</h3>
+                            <p class="card__price">Free &amp; Paid</p>
+                        </div>
+                    </div>
+                    <p class="card__description">Lorem ipsum dolor sit amet, consectetur<br>adipiscing elit.</p>
+                    <div class="card__actions">
+                        <button class="card__like" type="button" aria-pressed="false" aria-label="Like Invision">
+                            <img class="card__icon card__icon_idle" src="img/like_icon.svg" alt="" width="28" height="28">
+                            <img class="card__icon card__icon_pressed" src="img/like_icon_active.svg" alt="" width="28" height="28">
+                        </button>
+                        <button class="card__save" type="button" aria-pressed="false" aria-label="Save Invision">
+                            <img class="card__icon" src="img/add_icon.svg" alt="" width="30" height="30">
+                        </button>
+                        <a class="card__visit" href="https://www.invisionapp.com/" target="_blank" rel="noopener noreferrer">Visit</a>
+                    </div>
+                </article>
+            </div>
+            <p class="popular__empty" hidden>No tools match your search.</p>
+            <button class="popular__more" type="button">Load more</button>
+            <p class="popular__status" aria-live="polite"></p>
+        </section>
+
+        <section class="brand" aria-label="Trusted brands">
+            <div class="brand__panel">
+                <h2 class="brand__title">Trusted more than 150+ brand</h2>
+                <ul class="brand__list">
+                    <li class="brand__item">
+                        <img class="brand__logo" src="img/microsoft_logo.svg" alt="Microsoft" width="193" height="42">
+                    </li>
+                    <li class="brand__item">
+                        <img class="brand__logo" src="img/google_logo.svg" alt="Google" width="157" height="51">
+                    </li>
+                    <li class="brand__item">
+                        <img class="brand__logo" src="img/slack_logo_2.svg" alt="Slack" width="194" height="49">
+                    </li>
+                    <li class="brand__item">
+                        <img class="brand__logo" src="img/wordpress_logo.svg" alt="WordPress" width="194" height="44">
+                    </li>
+                </ul>
+            </div>
+        </section>
+    </main>
 </body>
 
 </html>

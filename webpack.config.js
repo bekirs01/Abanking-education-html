@@ -4,14 +4,18 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 module.exports = {
     mode: 'development',
     entry: {
-        styles: './src/styles/main.scss'
+        styles: './src/styles/main.scss',
+        main: './src/scripts/main.js'
     },
     output: {
         clean: false,
         assetModuleFilename: "assets/[hash][ext]"
     },
     devServer: {
-        open: true,
+        host: '127.0.0.1',
+        port: 8080,
+        open: false,
+        hot: true,
         static: {
             directory: './src',
             watch: true
@@ -21,7 +25,10 @@ module.exports = {
         new MiniCssExtractPlugin({
             filename: '[name].[contenthash].css'
         }),
-        new HtmlWebpackPlugin({template: "./src/index.html"})
+        new HtmlWebpackPlugin({
+            template: "./src/index.html",
+            scriptLoading: "defer"
+        })
     ],
     module: {
         rules: [
